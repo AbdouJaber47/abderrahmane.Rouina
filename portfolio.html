@@ -21,10 +21,10 @@
         <section id="accueil" class="min-h-screen flex items-center justify-center px-6 md:px-12 lg:px-24">
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2">
-                    <img src="https://enzostvs-cached-generation.hf.space/generate/portrait-of-a-young-engineering-student?format=portrait-9_16" 
-                         alt="Portrait étudiant GEII" 
-                         class="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover border-4 border-gray-200 shadow-lg">
-                </div>
+                    <div class="rounded-full w-64 h-64 md:w-80 md:h-80 bg-gray-200 border-4 border-gray-300 shadow-lg flex items-center justify-center">
+                        <i data-feather="user" class="w-32 h-32 text-gray-400"></i>
+                    </div>
+</div>
                 <div class="md:w-1/2 space-y-6">
                     <h1 class="text-4xl md:text-5xl font-bold">Étudiant en BUT GEII</h1>
                     <p class="text-xl text-gray-600">Passionné par l'électronique et l'informatique</p>
@@ -64,7 +64,12 @@
                         <p class="text-gray-600">Lycée [Nom] | 2019 - 2022</p>
                         <p class="mt-2 text-gray-700">Option Sciences de l'Ingénieur, spécialité Mathématiques.</p>
                     </div>
-                </div>
+                    <div class="border-l-4 border-gray-800 pl-6 py-2">
+                        <h4 class="font-bold">Stage en entreprise</h4>
+                        <p class="text-gray-600">Entreprise [Nom] | 2023</p>
+                        <p class="mt-2 text-gray-700">Développement d'une application de gestion des stocks pour un système industriel.</p>
+                    </div>
+</div>
             </div>
         </section>
 
@@ -141,6 +146,6 @@
 
     <script src="script.js"></script>
     <script>feather.replace();</script>
-<script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
+
 </body>
 </html>
