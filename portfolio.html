@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circuit Sage - Portfolio GEII</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="components/navbar.js"></script>
+    <script src="components/project-card.js"></script>
+    <script src="components/skill-card.js"></script>
+    <script src="components/contact-form.js"></script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+    <custom-navbar></custom-navbar>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="accueil" class="min-h-screen flex items-center justify-center px-6 md:px-12 lg:px-24">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://enzostvs-cached-generation.hf.space/generate/portrait-of-a-young-engineering-student?format=portrait-9_16" 
+                         alt="Portrait étudiant GEII" 
+                         class="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover border-4 border-gray-200 shadow-lg">
+                </div>
+                <div class="md:w-1/2 space-y-6">
+                    <h1 class="text-4xl md:text-5xl font-bold">Étudiant en BUT GEII</h1>
+                    <p class="text-xl text-gray-600">Passionné par l'électronique et l'informatique</p>
+                    <p class="text-gray-700">Je m'appelle [Votre Prénom] et je suis actuellement en formation à l'IUT de la Sorbonne Paris Nord. Mon parcours m'a permis d'acquérir des compétences solides en conception électronique, programmation embarquée et développement logiciel.</p>
+                    <div class="flex gap-4">
+                        <a href="#projets" class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">Voir mes projets</a>
+                        <a href="#parcours" class="px-6 py-3 border border-gray-800 rounded-lg hover:bg-gray-100 transition">Mon parcours</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projets" class="py-20 px-6 md:px-12 lg:px-24 bg-gray-50">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-bold mb-12 text-center">Mes Projets</h2>
+                <div class="projects-container relative">
+                    <div class="projects-scroll flex overflow-x-auto pb-10 space-x-8 scrollbar-hide">
+                        <!-- Project cards will be inserted here by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Section -->
+        <section id="parcours" class="py-20 px-6 md:px-12 lg:px-24">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-bold mb-12 text-center">Mon Parcours</h2>
+                
+                <div class="space-y-6">
+                    <div class="border-l-4 border-gray-800 pl-6 py-2">
+                        <h4 class="font-bold">BUT GEII - Génie Électrique et Informatique Industrielle</h4>
+                        <p class="text-gray-600">IUT de la Sorbonne Paris Nord | 2022 - 2025</p>
+                        <p class="mt-2 text-gray-700">Formation pluridisciplinaire en électronique, automatisme, informatique industrielle et réseaux.</p>
+                    </div>
+                    <div class="border-l-4 border-gray-800 pl-6 py-2">
+                        <h4 class="font-bold">Baccalauréat Scientifique</h4>
+                        <p class="text-gray-600">Lycée [Nom] | 2019 - 2022</p>
+                        <p class="mt-2 text-gray-700">Option Sciences de l'Ingénieur, spécialité Mathématiques.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="competences" class="py-20 px-6 md:px-12 lg:px-24 bg-gray-50 parallax-section">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-bold mb-12 text-center">Mes Compétences</h2>
+                
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-6">Hard Skills</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <custom-skill-card icon="cpu" title="Électronique" level="80"></custom-skill-card>
+                            <custom-skill-card icon="code" title="Programmation" level="75"></custom-skill-card>
+                            <custom-skill-card icon="git-merge" title="Git" level="70"></custom-skill-card>
+                            <custom-skill-card icon="wifi" title="Réseaux" level="65"></custom-skill-card>
+                            <custom-skill-card icon="database" title="Bases de données" level="60"></custom-skill-card>
+                            <custom-skill-card icon="hard-drive" title="Systèmes embarqués" level="75"></custom-skill-card>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-6">Soft Skills</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <custom-skill-card icon="users" title="Travail d'équipe" level="90"></custom-skill-card>
+                            <custom-skill-card icon="message-square" title="Communication" level="85"></custom-skill-card>
+                            <custom-skill-card icon="clock" title="Gestion du temps" level="80"></custom-skill-card>
+                            <custom-skill-card icon="book" title="Auto-formation" level="85"></custom-skill-card>
+                            <custom-skill-card icon="target" title="Résolution de problèmes" level="90"></custom-skill-card>
+                            <custom-skill-card icon="trending-up" title="Adaptabilité" level="95"></custom-skill-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- Contact Section -->
+        <section id="contact" class="py-20 px-6 md:px-12 lg:px-24 bg-gray-50">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold mb-12 text-center">Contactez-moi</h2>
+                <div class="grid md:grid-cols-2 gap-12">
+                    <custom-contact-form></custom-contact-form>
+                    <div class="space-y-6">
+                        <h3 class="text-xl font-semibold">Réseaux professionnels</h3>
+                        <div class="space-y-4">
+                            <a href="#" class="flex items-center gap-3 text-gray-700 hover:text-gray-900 transition">
+                                <i data-feather="linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="#" class="flex items-center gap-3 text-gray-700 hover:text-gray-900 transition">
+                                <i data-feather="github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="#" class="flex items-center gap-3 text-gray-700 hover:text-gray-900 transition">
+                                <i data-feather="mail"></i>
+                                <span>email@example.com</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-8 px-6 bg-gray-800 text-white">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <p>© 2023 Circuit Sage - Tous droits réservés</p>
+            <div class="flex gap-6 mt-4 md:mt-0">
+                <a href="#" class="hover:text-gray-300 transition"><i data-feather="github"></i></a>
+                <a href="#" class="hover:text-gray-300 transition"><i data-feather="linkedin"></i></a>
+                <a href="#" class="hover:text-gray-300 transition"><i data-feather="mail"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+<script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
+</body>
+</html>
